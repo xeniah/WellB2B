@@ -1,0 +1,44 @@
+<% title "Challenge" %>
+
+<p>
+  <strong>User From:</strong>
+  <%= @challenge.user_from_id %>
+</p>
+<p>
+  <strong>User To:</strong>
+  <%= @challenge.user_to_id %>
+</p>
+<p>
+  <strong>Challenge Txt:</strong>
+  <%= @challenge.challenge_txt %>
+</p>
+<p>
+  <strong>Challenge Tm:</strong>
+  <%= @challenge.challenge_tm %>
+</p>
+<p>
+  <strong>Send Dt:</strong>
+  <%= @challenge.send_dt %>
+</p>
+<p>
+  <strong>Accepted:</strong>
+  <%= @challenge.accepted %>
+</p>
+<p>
+  <strong>Accepted Dt:</strong>
+  <%= @challenge.accepted_dt %>
+</p>
+<p>
+  <strong>Due Dt:</strong>
+  <%= @challenge.due_dt %>
+</p>
+<p>
+  <strong>Complete Dt:</strong>
+  <%= @challenge.complete_dt %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_challenge_path(@challenge) %> |
+  <%= link_to "Destroy", @challenge, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", challenges_path %>
+</p>

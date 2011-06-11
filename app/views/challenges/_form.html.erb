@@ -1,0 +1,40 @@
+<%= form_for @challenge do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :user_from_id %><br />
+    <%= f.text_field :user_from_id %>
+  </p>
+  <p>
+    <%= f.label :user_to_id %><br />
+    <%= f.text_field :user_to_id %>
+  </p>
+  <p>
+    <%= f.label :challenge_txt %><br />
+    <%= f.text_field :challenge_txt %>
+  </p>
+  <p>
+    <%= f.label :challenge_tm %><br />
+    <%= f.text_field :challenge_tm %>
+  </p>
+  <p>
+    <%= f.label :send_dt %><br />
+    <%= f.date_select :send_dt %>
+  </p>
+  <p>
+    <%= f.label :accepted %><br />
+    <%= f.text_field :accepted %>
+  </p>
+  <p>
+    <%= f.label :accepted_dt %><br />
+    <%= f.date_select :accepted_dt %>
+  </p>
+  <p>
+    <%= f.label :due_dt %><br />
+    <%= f.date_select :due_dt %>
+  </p>
+  <p>
+    <%= f.label :complete_dt %><br />
+    <%= f.date_select :complete_dt %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

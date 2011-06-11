@@ -1,0 +1,201 @@
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (32.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateChallenges (20110611223714)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "challenges" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_from_id" integer, "user_to_id" integer, "challenge_txt" varchar(255), "challenge_tm" integer, "send_dt" date, "accepted" integer, "accepted_dt" date, "due_dt" date, "complete_dt" date, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110611223714')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("challenges")
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/challenges" for 127.0.0.1 at 2011-06-11 15:39:54 -0700
+  Processing by ChallengesController#index as HTML
+  [1m[36mChallenge Load (0.5ms)[0m  [1mSELECT "challenges".* FROM "challenges"[0m
+Rendered challenges/index.html.erb within layouts/application (18.5ms)
+Completed 500 Internal Server Error in 117ms
+
+ActionView::Template::Error (undefined method `title' for #<#<Class:0x000001031938c8>:0x00000103191d98>):
+    1: <% title "Challenges" %>
+    2: 
+    3: <table>
+    4:   <tr>
+  app/views/challenges/index.html.erb:1:in `_app_views_challenges_index_html_erb__3726715515733177099_2173353860_719310246409190263'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/challenges" for 127.0.0.1 at 2011-06-11 15:41:20 -0700
+  Processing by ChallengesController#index as HTML
+  [1m[36mChallenge Load (0.4ms)[0m  [1mSELECT "challenges".* FROM "challenges"[0m
+Rendered challenges/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 78ms (Views: 6.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2011-06-11 15:41:28 -0700
+  Processing by ChallengesController#new as HTML
+Rendered challenges/_form.html.erb (72.7ms)
+Rendered challenges/new.html.erb within layouts/application (76.8ms)
+Completed 200 OK in 92ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 15:42:04 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"g6t7yue9", "user_to_id"=>"tf gyhu", "challenge_txt"=>" gyfcdhwxqi", "challenge_tm"=>" gyfreiw", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"11", "accepted"=>"tr4y3enou", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"11", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"11", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"11"}, "commit"=>"Create Challenge"}
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (0, 0, ' gyfcdhwxqi', 0, '2011-06-11', 0, '2011-06-11', '2011-06-11', '2011-06-11', '2011-06-11 22:42:05.007221', '2011-06-11 22:42:05.007221')[0m
+Redirected to http://localhost:3000/challenges/1
+Completed 302 Found in 63ms
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 15:42:05 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChallenge Load (0.3ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 63ms (Views: 22.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/challenges/1/edit" for 127.0.0.1 at 2011-06-11 15:42:10 -0700
+  Processing by ChallengesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChallenge Load (0.2ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1[0m
+Rendered challenges/_form.html.erb (53.2ms)
+Rendered challenges/edit.html.erb within layouts/application (57.3ms)
+Completed 200 OK in 73ms (Views: 61.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/challenges/" for 127.0.0.1 at 2011-06-11 15:42:25 -0700
+  Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges"
+Rendered challenges/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 60ms (Views: 51.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2011-06-11 15:48:27 -0700
+  Processing by ChallengesController#new as HTML
+Rendered challenges/_form.html.erb (49.3ms)
+Rendered challenges/new.html.erb within layouts/application (52.9ms)
+Completed 200 OK in 67ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 15:48:34 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChallenge Load (0.2ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1[0m
+Rendered challenges/show.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 59ms (Views: 47.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/challenges/1/edit" for 127.0.0.1 at 2011-06-11 15:48:37 -0700
+  Processing by ChallengesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChallenge Load (0.2ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1
+Rendered challenges/_form.html.erb (56.9ms)
+Rendered challenges/edit.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 77ms (Views: 64.9ms | ActiveRecord: 0.2ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateChallenges (20110611223714)
+Migrating to CreateUsers (20110611230241)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110611230241')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("challenges")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-06-11 16:09:08 -0700
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 115ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-06-11 16:09:14 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (27.0ms)
+Rendered users/new.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 70ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-06-11 16:25:43 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (38.9ms)
+Rendered users/new.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 66ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-06-11 16:27:11 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (40.1ms)
+Rendered users/new.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 69ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-06-11 16:27:31 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user"=>{"username"=>"etrvfbdnqs", "email"=>"test1@rLabG.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('test1@rLabG.com')) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."username") = LOWER('etrvfbdnqs')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."persistence_token" = 'a9da6428bb7aadbd5bca42ce298dcabf430e7113e3279b985a335cb8f7da6edcf545655a808fed6aeee3745776e7f95761089b58d396d881ff1af1afee989cac') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at") VALUES ('etrvfbdnqs', 'test1@rLabG.com', '2c3f844fdee281d7535ba417ca81ae0628f0e4b9bad57fe3c81b6421d9b86ecaf35f52cd15e664b2a21fc3fe4a87a062f4daf4db688fb70c99b74520d0890396', 'Jh5k4oa7O3UIqvimrFt', 'a9da6428bb7aadbd5bca42ce298dcabf430e7113e3279b985a335cb8f7da6edcf545655a808fed6aeee3745776e7f95761089b58d396d881ff1af1afee989cac', '2011-06-11 23:27:31.625259', '2011-06-11 23:27:31.625259')[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 174ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-06-11 16:27:31 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 33ms (Views: 13.2ms | ActiveRecord: 0.2ms)

@@ -1,0 +1,21 @@
+one:
+  user_from_id: 1
+  user_to_id: 1
+  challenge_txt: MyString
+  challenge_tm: 1
+  send_dt: 2011-06-11
+  accepted: 1
+  accepted_dt: 2011-06-11
+  due_dt: 2011-06-11
+  complete_dt: 2011-06-11
+
+two:
+  user_from_id: 1
+  user_to_id: 1
+  challenge_txt: MyString
+  challenge_tm: 1
+  send_dt: 2011-06-11
+  accepted: 1
+  accepted_dt: 2011-06-11
+  due_dt: 2011-06-11
+  complete_dt: 2011-06-11
