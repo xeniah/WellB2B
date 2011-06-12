@@ -6,6 +6,9 @@ gem 'rails', '3.0.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'heroku'
+gem 'rake', "0.8.7"
+
 
 gem 'nifty-generators'
 gem 'authlogic'
