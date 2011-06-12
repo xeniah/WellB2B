@@ -10342,3 +10342,331 @@ Started GET "/challenges/47" for 127.0.0.1 at Sun Jun 12 12:01:23 -0700 2011
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
 Rendered challenges/show.html.erb within layouts/application (107.9ms)
 Completed 200 OK in 119ms (Views: 113.0ms | ActiveRecord: 0.4ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-12 12:18:09 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (5.0ms)
+ERROR: compiling _app_views_layouts_application_html_erb___2148838505277757178_2163930540_3201129626923339446 RAISED /Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:31: unmatched close parenthesis: /span>);@output_buffer.safe_concat('<br/
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:32: syntax error, unexpected '<'
+     	<div style="text-align:center">
+     	 ^
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:34: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+.../challenges/list/my_challenges' );@output_buffer.safe_concat...
+...                               ^
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...hallenges/list/sent_challenges' );@output_buffer.safe_concat...
+...                               ^
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:42: unknown regexp options - dv
+unmatched close parenthesis: /div>
+');	     end 
+@output_buffer.safe_concat('	 <div>
+      ');@output_buffer.append= ( content_tag :h1, yield(:title) if show_title? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	  
+      ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </i
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:43: syntax error, unexpected '<'
+  </body>
+   ^
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:44: unknown regexp options - htl
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:45: unterminated string meets end of file
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:45: syntax error, unexpected $end, expecting ')'
+Function body:           def _app_views_layouts_application_html_erb___2148838505277757178_2163930540_3201129626923339446(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+  <head>
+	<div style="float:right; background-color:white;">
+');
+
+		  if current_user.nil? 
+@output_buffer.safe_concat('	        ');@output_buffer.append= ( link_to "Register", new_user_path);@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			');@output_buffer.append= ( link_to "Login", login_path );@output_buffer.safe_concat('
+');		  else 
+@output_buffer.safe_concat('			');@output_buffer.append= ( link_to "Logout", logout_path );@output_buffer.safe_concat('
+');		  end 	
+@output_buffer.safe_concat('	</div>	
+    <title>');@output_buffer.append= ( content_for?(:title) ? yield(:title) : "Wellness Buzz" );@output_buffer.safe_concat('</title>
+    ');@output_buffer.append= ( stylesheet_link_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( yield(:head) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	
+  </head>
+  <body>
+    <div id="container">
+      <img align="right" src="/images/B2BWellLogo.png" />
+');@output_buffer.append_if_string=        flash.each do |name, msg| 
+@output_buffer.safe_concat('        ');@output_buffer.append= ( content_tag :div, msg, :id => "flash_#{name}" );@output_buffer.safe_concat('
+');       end 
+@output_buffer.safe_concat('	 <div id = "nav">
+');		 if request[:controller] == 'user_sessions' || 
+			(request[:controller] == 'users' && request[:action] == 'new')
+		 else 
+@output_buffer.safe_concat('		    ');@output_buffer.append= ( "Hello <span>#{current_user.username}!" </span>);@output_buffer.safe_concat('<br/>
+     	<div style="text-align:center">
+    	    	');@output_buffer.append= ( link_to "[New Challenge]\t", new_challenge_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		    ');@output_buffer.append= ( link_to "[My Challenges]\t",  '/challenges/list/my_challenges' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		    ');@output_buffer.append= ( link_to "[Sent Challenges]",'/challenges/list/sent_challenges' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('     	</div>
+');	     end 
+@output_buffer.safe_concat('	 <div>
+      ');@output_buffer.append= ( content_tag :h1, yield(:title) if show_title? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	  
+      ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </div>
+  </body>
+</html>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:255:in `module_eval'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:255:in `compile'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:134:in `block in render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:54:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:127:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:62:in `block in _render_template'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:26:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/Users/xeniah/xendev/SW/WellB2B/app/controllers/user_sessions_controller.rb:8:in `new'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:441:in `_run__4214544392186820301__process_action__1559633121492315142__callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/base.rb:119:in `process'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal.rb:178:in `block in action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:12:in `cache'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:31:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/rack/logger.rb:13:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/application.rb:168:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/application.rb:77:in `method_missing'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered user_sessions/new.html.erb within layouts/application (24.3ms)
+Completed 500 Internal Server Error in 82ms
+
+ActionView::Template::Error (/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:31: unmatched close parenthesis: /span>);@output_buffer.safe_concat('<br/
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:32: syntax error, unexpected '<'
+     	<div style="text-align:center">
+     	 ^
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:34: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+.../challenges/list/my_challenges' );@output_buffer.safe_concat...
+...                               ^
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...hallenges/list/sent_challenges' );@output_buffer.safe_concat...
+...                               ^
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:42: unknown regexp options - dv
+unmatched close parenthesis: /div>
+');	     end 
+@output_buffer.safe_concat('	 <div>
+      ');@output_buffer.append= ( content_tag :h1, yield(:title) if show_title? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	  
+      ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </i
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:43: syntax error, unexpected '<'
+  </body>
+   ^
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:44: unknown regexp options - htl
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:45: unterminated string meets end of file
+/Users/xeniah/xendev/SW/WellB2B/app/views/layouts/application.html.erb:45: syntax error, unexpected $end, expecting ')'):
+    28: 		<% if request[:controller] == 'user_sessions' || 
+    29: 			(request[:controller] == 'users' && request[:action] == 'new')%>
+    30: 		<% else %>
+    31: 		    <%= "Hello <span>#{current_user.username}!" </span>%><br/>
+    32:      	<div style="text-align:center">
+    33:     	    	<%= link_to "[New Challenge]\t", new_challenge_path %>
+    34: 		    <%= link_to "[My Challenges]\t",  '/challenges/list/my_challenges' %>
+  app/controllers/user_sessions_controller.rb:8:in `new'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (36.3ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (42.8ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-12 12:20:48 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (5.2ms)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered user_sessions/new.html.erb within layouts/application (221.2ms)
+Completed 200 OK in 251ms (Views: 224.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-06-12 12:20:57 -0700
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user_session"=>{"username"=>"demo", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users".username LIKE 'demo') LIMIT 1
+Redirected to http://localhost:3000/challenges/list/my_challenges
+Completed 302 Found in 93ms
+
+
+Started GET "/challenges/list/my_challenges" for 127.0.0.1 at 2011-06-12 12:20:57 -0700
+  Processing by ChallengesController#my_challenges as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mChallenge Load (8.5ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_to_id" = 3 ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered challenges/my_challenges.html.erb within layouts/application (187.6ms)
+Completed 200 OK in 193ms (Views: 183.8ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/challenges/graphic_view" for 127.0.0.1 at 2011-06-12 12:35:03 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"graphic_view"}
+  [1m[36mChallenge Load (0.2ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 0 LIMIT 1[0m
+Completed 404 Not Found in 13ms
+
+ActiveRecord::RecordNotFound (Couldn't find Challenge with ID=graphic_view):
+  app/controllers/challenges_controller.rb:10:in `show'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (48.3ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-12 12:35:09 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (5.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered user_sessions/new.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 58ms (Views: 30.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-06-12 12:35:18 -0700
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user_session"=>{"username"=>"demo", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users".username LIKE 'demo') LIMIT 1
+Redirected to http://localhost:3000/challenges/list/my_challenges
+Completed 302 Found in 39ms
+
+
+Started GET "/challenges/list/my_challenges" for 127.0.0.1 at 2011-06-12 12:35:18 -0700
+  Processing by ChallengesController#my_challenges as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mChallenge Load (43.7ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_to_id" = 3 ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered challenges/my_challenges.html.erb within layouts/application (190.3ms)
+Completed 200 OK in 195ms (Views: 150.3ms | ActiveRecord: 44.5ms)

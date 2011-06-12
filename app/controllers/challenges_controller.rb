@@ -20,6 +20,7 @@ class ChallengesController < ApplicationController
     @challenge[:complete_dt] = nil;
     @challenge[:accepted_dt] = nil;
     if @challenge.save
+      
       #render :action => "sent_challenges", :object => @challenges
       #redirect_to :action => "sent_challenges"
       #redirect_to @challenge, :notice => "Successfully created challenge."
