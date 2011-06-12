@@ -1,6 +1,11 @@
 class ChallengesController < ApplicationController
   def index
-    @challenges = Challenge.all
+    if current_user.nil?
+      redirect_to :controller=>'user_sessions', :action => 'new';
+    end
+    @challenges = Challenge.find_all_by_user_from_id(current_user.id)
+    #puts "#{@challenges.count}"
+    #@challenges
   end
 
   def show
@@ -13,6 +18,7 @@ class ChallengesController < ApplicationController
 
   def create
     @challenge = Challenge.new(params[:challenge])
+    @challenge[:user_from_id] = current_user.id
     if @challenge.save
       redirect_to @challenge, :notice => "Successfully created challenge."
     else
@@ -31,6 +37,10 @@ class ChallengesController < ApplicationController
     else
       render :action => 'edit'
     end
+  end
+  
+  def my_challenges
+    render 'my_challenges'
   end
 
   def destroy

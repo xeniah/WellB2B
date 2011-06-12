@@ -1,3 +1,7 @@
+<%= link_to "New Challenge", new_challenge_path %>
+<%= link_to "My Challenges", '/challenges/' %>
+<%= link_to "Sent Challenges", '/challenges' %>
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
