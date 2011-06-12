@@ -3,15 +3,14 @@
 
 <table>
   <tr>
-    <th>User From</th>
-    <th>User To</th>
-    <th>Challenge Txt</th>
-    <th>Challenge Tm</th>
-    <th>Send Dt</th>
+    <th>From</th>
+    <th>Description</th>
+    <th>Complete Time</th>
+    <th>Send Date</th>
     <th>Accepted</th>
-    <th>Accepted Dt</th>
-    <th>Due Dt</th>
-    <th>Complete Dt</th>
+    <th>Accepted Date</th>
+    <th>Due Date</th>
+    <th>Complete Date</th>
   </tr>
   <% for challenge in @challenges %>
     <tr>
@@ -19,12 +18,6 @@
 			<% user_from = User.find(challenge.user_from_id)%>
 		  	<% if !user_from.nil? %>
 		    	<%= user_from.username %>
-		  	<% end%>
-	  </td>
-      <td>
-			<% user_to = User.find(challenge.user_to_id)%>
-		  	<% if !user_to.nil? %>
-		    	<%= user_to.username %>
 		  	<% end%>
 	  </td>
       <td><%= challenge.challenge_txt %></td>

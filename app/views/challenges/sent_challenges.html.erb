@@ -2,24 +2,17 @@
 <%  @challenges = Challenge.find_all_by_user_from_id(current_user.id, :order => 'created_at DESC') %>
 <table>
   <tr>
-    <th>User From</th>
-    <th>User To</th>
-    <th>Challenge Txt</th>
-    <th>Challenge Tm</th>
-    <th>Send Dt</th>
+    <th>To</th>
+    <th>Description</th>
+    <th>Duration</th>
+    <th>Send Date</th>
     <th>Accepted</th>
-    <th>Accepted Dt</th>
-    <th>Due Dt</th>
-    <th>Complete Dt</th>
+    <th>Accepted Date</th>
+    <th>Due Date</th>
+    <th>Complete Date</th>
   </tr>
   <% for challenge in @challenges %>
     <tr>
-  		<td>	
-				<% user_from = User.find(challenge.user_from_id)%>
-			  	<% if !user_from.nil? %>
-			    	<%= user_from.username %>
-			  	<% end%>
-		  </td>
 	      <td>
 				<% user_to = User.find(challenge.user_to_id)%>
 			  	<% if !user_to.nil? %>

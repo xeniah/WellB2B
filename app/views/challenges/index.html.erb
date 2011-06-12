@@ -2,24 +2,20 @@
 
 <table>
   <tr>
-    <th>User From</th>
-    <th>User To</th>
-    <th>Challenge Txt</th>
-    <th>Challenge Tm</th>
-    <th>Send Dt</th>
-    <th>Accepted</th>
-    <th>Accepted Dt</th>
-    <th>Due Dt</th>
-    <th>Complete Dt</th>
+    <th>From</th>
+    <th>Description</th>
+    <th>Complete Time</th>
+    <th>Send Date</th>
+    <th>Accept Date</th>
+    <th>Due</th>
+    <th>Complete Time</th>
   </tr>
   <% for challenge in @challenges %>
     <tr>
       <td><%= challenge.user_from_id %></td>
-      <td><%= challenge.user_to_id %></td>
       <td><%= challenge.challenge_txt %></td>
       <td><%= challenge.challenge_tm %></td>
       <td><%= challenge.send_dt %></td>
-      <td><%= challenge.accepted %></td>
       <td><%= challenge.accepted_dt %></td>
       <td><%= challenge.due_dt %></td>
       <td><%= challenge.complete_dt %></td>

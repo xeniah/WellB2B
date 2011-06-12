@@ -1,21 +1,21 @@
-<% title "Challenge" %>
+<% title "Challenge Details" %>
 
 <p>
-  <strong>User From:</strong>
+  <strong>From:</strong>
   <% user_from = User.find(@challenge.user_from_id)%>
   <% if !user_from.nil? %>
     <%= user_from.username %>
   <% end%>
 </p>
 <p>
-  <strong>User To:</strong>
+  <strong>To:</strong>
   <% user_to = User.find(@challenge.user_to_id)%>
   <% if !user_to.nil? %>
     <%= user_to.username %>
   <% end%>
 </p>
 <p>
-  <strong>Challenge Txt:</strong>
+  <strong>Description:</strong>
   <%= @challenge.challenge_txt %>
 </p>
 <% if @challenge.accepted.nil?%>
@@ -29,23 +29,19 @@
 	<% end %>
 <% end %>
 <p>
-  <strong>Challenge Tm:</strong>
+  <strong>Challenge Time:</strong>
   <%= @challenge.challenge_tm %>
 </p>
 <p>
-  <strong>Send Dt:</strong>
+  <strong>Send Date:</strong>
   <%= @challenge.send_dt %>
 </p>
 <p>
-  <strong>Accepted:</strong>
-  <%= @challenge.accepted %>
-</p>
-<p>
-  <strong>Accepted Dt:</strong>
+  <strong>Accepted Date:</strong>
   <%= @challenge.accepted_dt %>
 </p>
 <p>
-  <strong>Due Dt:</strong>
+  <strong>Due Date:</strong>
   <%= @challenge.due_dt %>
 </p>
 
@@ -64,7 +60,7 @@
 	<% end %>
 <% end %>
 <p>
-  <strong>Complete Dt:</strong>
+  <strong>Complete Date:</strong>
   <%= @challenge.complete_dt %>
 </p>
 </p>

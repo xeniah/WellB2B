@@ -10,13 +10,15 @@
     <%#= f.text_field :user_to_id %>
   <!-- </p> -->
   <p>
-	<%= f.label :user_to_id %><br />
-	<%= f.collection_select :user_to_id, User.all, :id, :username %>;
+	Challenge User:
+	<%= f.collection_select :user_to_id, User.all, :id, :username %>
   </p>
   <p>
-    <%= f.label :challenge_txt %><br />
+    Challenge Description:
     <%= f.text_field :challenge_txt %>
   </p>
+  <p>
+    Note: Challenge currently defaults to 5 minutes.
   <!-- <p> -->
     <%#= f.label :challenge_tm %><br />
     <%#= f.text_field :challenge_tm %>
