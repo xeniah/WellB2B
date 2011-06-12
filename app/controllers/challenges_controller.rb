@@ -18,6 +18,7 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.new(params[:challenge])
     @challenge[:user_from_id] = current_user.id
     @challenge[:complete_dt] = nil;
+    @challenge[:accepted_dt] = nil;
     if @challenge.save
       #render :action => "sent_challenges", :object => @challenges
       #redirect_to :action => "sent_challenges"
@@ -34,6 +35,7 @@ class ChallengesController < ApplicationController
 
   def update
     @challenge = Challenge.find(params[:id])
+    
     if @challenge.update_attributes(params[:challenge])
       redirect_to @challenge, :notice  => "Successfully updated challenge."
     else
@@ -42,7 +44,7 @@ class ChallengesController < ApplicationController
   end
   
   def my_challenges
-    @challenges = Challenge.find_all_by_user_to_id(current_user.id)
+    #@challenges = Challenge.find_all_by_user_to_id(current_user.id)
     respond_to do |format|
       format.html # 
      # format.xml { render :xml => @user_session }
@@ -51,7 +53,7 @@ class ChallengesController < ApplicationController
   end
   
   def sent_challenges
-    @challenges = Challenge.find_all_by_user_from_id(current_user.id)
+    #@challenges = Challenge.find_all_by_user_from_id(current_user.id)
     respond_to do |format|
       format.html # 
      # format.xml { render :xml => @user_session }

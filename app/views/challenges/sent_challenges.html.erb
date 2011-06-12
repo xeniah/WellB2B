@@ -1,5 +1,5 @@
 <% title "Sent Challenges" %>
-<%  @challenges = Challenge.find_all_by_user_from_id(current_user.id) %>
+<%  @challenges = Challenge.find_all_by_user_from_id(current_user.id, :order => 'created_at DESC') %>
 <table>
   <tr>
     <th>User From</th>
@@ -30,4 +30,4 @@
   <% end %>
 </table>
 
-<p><%= link_to "New Challenge", new_challenge_path %></p>
+<p><%#= link_to "New Challenge", new_challenge_path %></p>

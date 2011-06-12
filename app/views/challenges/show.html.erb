@@ -14,9 +14,12 @@
 </p>
 <% if @challenge.accepted.nil?%>
 	<%= form_for @challenge do |f| %>
+		Reject
 		<%= f.radio_button :accepted, 0 %>
+		Accept
 		<%= f.radio_button :accepted, 1 %>
-		<%= f.submit %>>
+		<%= f.hidden_field(:accepted_dt, :value => Time.now) %>
+		<%= f.submit %>
 	<% end %>
 <% end %>
 <p>
@@ -39,13 +42,19 @@
   <strong>Due Dt:</strong>
   <%= @challenge.due_dt %>
 </p>
-<% if !@challenge.complete_dt.nil?%>
+
+<% if !@challenge.complete_dt.nil? %>
 	<H2>I've done it!!! Hurray!</H2>	
 <% else %>
-	<%= form_for @challenge do |f| %>
-	<%= f.hidden_field(:complete_dt, :value => Date.current) %>
-	
-	<%= f.submit 'I have completed it!'%>
+	<% if @challenge.accepted == 1 %> 
+		<%if (Time.now - @challenge.updated_at) > 311 %>
+			<H4>LOSER!!! LOSER!!! Haaaa!</H4>
+		<% else %>
+			<%= form_for @challenge do |f| %>
+			<%= f.hidden_field(:complete_dt, :value => Time.now) %>
+			<%= f.submit 'I have completed it!'%>
+			<% end %>
+		<% end %>
 	<% end %>
 <% end %>
 <p>
