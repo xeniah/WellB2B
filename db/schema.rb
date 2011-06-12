@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110611230241) do
+ActiveRecord::Schema.define(:version => 20110612011945) do
 
   create_table "challenges", :force => true do |t|
     t.integer  "user_from_id"
@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(:version => 20110611230241) do
     t.date     "accepted_dt"
     t.date     "due_dt"
     t.date     "complete_dt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_sessions", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end

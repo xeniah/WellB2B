@@ -556,3 +556,216 @@ Started GET "/users/1" for 127.0.0.1 at 2011-06-11 18:05:23 -0700
   [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
 Rendered users/show.html.erb within layouts/application (8.9ms)
 Completed 200 OK in 34ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-06-11 18:18:01 -0700
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 117ms (Views: 15.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-06-11 18:18:14 -0700
+
+ActionController::RoutingError (No route matches "/login"):
+  
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-06-11 18:23:06 -0700
+
+LoadError (Expected /Users/xeniah/xendev/SW/WellB2B/app/controllers/users_controller.rb to define UsersController):
+  
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.1ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateChallenges (20110611223714)
+Migrating to CreateUsers (20110611230241)
+Migrating to CreateUserSessions (20110612011945)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "user_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110612011945')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("challenges")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("user_sessions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-06-11 18:24:26 -0700
+
+LoadError (Expected /Users/xeniah/xendev/SW/WellB2B/app/controllers/users_controller.rb to define UsersController):
+  
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-06-11 18:24:29 -0700
+
+LoadError (Expected /Users/xeniah/xendev/SW/WellB2B/app/controllers/users_controller.rb to define UsersController):
+  
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.3ms)
+
+
+Started GET "/challenges" for 127.0.0.1 at 2011-06-11 18:24:37 -0700
+  Processing by ChallengesController#index as HTML
+  [1m[36mChallenge Load (0.5ms)[0m  [1mSELECT "challenges".* FROM "challenges"[0m
+Rendered challenges/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 114ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-06-11 18:24:41 -0700
+
+LoadError (Expected /Users/xeniah/xendev/SW/WellB2B/app/controllers/users_controller.rb to define UsersController):
+  
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-06-11 18:25:59 -0700
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 119ms (Views: 16.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-06-11 18:26:09 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (13.2ms)
+Rendered users/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 43ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-06-11 18:26:46 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (11.1ms)
+Rendered users/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 38ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-06-11 18:26:59 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user"=>{"username"=>"test3", "email"=>"test1@rLabG.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('test1@rLabG.com')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."username") = LOWER('test3')) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE ("users"."persistence_token" = 'e7efbe3db6e3250fe0e97378ac001042f9c4c14ae9e2ffc69a281740976409d6e6f7c6474cb05f1021c8e6368cc2f414f3ccb94cad84a96b5066a2590a226291') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at") VALUES ('test3', 'test1@rLabG.com', 'edd68ff15342b426b8a86106b04884c5979572f8d90dd14b0ec8578507e226b2b9dd4ee0aec23c6f48b3bde9b90db09da19ec3c8de264a8aaa760e7972752854', 'dKh8OfeqnfNroM2VMk5', 'e7efbe3db6e3250fe0e97378ac001042f9c4c14ae9e2ffc69a281740976409d6e6f7c6474cb05f1021c8e6368cc2f414f3ccb94cad84a96b5066a2590a226291', '2011-06-12 01:26:59.788135', '2011-06-12 01:26:59.788135')
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 115ms
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-06-11 18:26:59 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 71ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-06-11 18:29:42 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (5.0ms)
+Rendered user_sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 39ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-06-11 18:29:58 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (18.8ms)
+Rendered users/new.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 116ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-06-11 18:30:06 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user"=>{"username"=>"demo", "email"=>"test1@rLabG.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('test1@rLabG.com')) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."username") = LOWER('demo')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."persistence_token" = '84859e2dbc6d1d2396388096412ae1d448e18bd5b2a9c16a9866e8c4c669b8f59dd7d0c41ca8bc2b440db8bca9766c0dca0da08a36eb993c1e104053cf90a625') LIMIT 1[0m
+Rendered users/_form.html.erb (9.6ms)
+Rendered users/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 160ms (Views: 16.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-06-11 18:30:23 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user"=>{"username"=>"demo", "email"=>"test4@rLabG.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('test4@rLabG.com')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."username") = LOWER('demo')) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE ("users"."persistence_token" = '5f940bd0ab5efc05a73853123726c94a43aee79cee0bf5a4c54576a2c2a36e5b004c18f786ca905157a014afca310c9793f5397ec9957e2ff7f4193891f2b657') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'e7efbe3db6e3250fe0e97378ac001042f9c4c14ae9e2ffc69a281740976409d6e6f7c6474cb05f1021c8e6368cc2f414f3ccb94cad84a96b5066a2590a226291' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'e7efbe3db6e3250fe0e97378ac001042f9c4c14ae9e2ffc69a281740976409d6e6f7c6474cb05f1021c8e6368cc2f414f3ccb94cad84a96b5066a2590a226291' LIMIT 1[0m
+  [1m[35mAREL (1.1ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at") VALUES ('demo', 'test4@rLabG.com', 'cc29b9ebc35404682f41f5f4a5fb0710ec3951aef2c9a5c257497aa1f4f15f672710beb4f310b29e13e435a335356d3267dfbf1e683c32f727c760103fc0c7fd', 'mmeIO4Jw11PqSjGFpQPR', '5f940bd0ab5efc05a73853123726c94a43aee79cee0bf5a4c54576a2c2a36e5b004c18f786ca905157a014afca310c9793f5397ec9957e2ff7f4193891f2b657', '2011-06-12 01:30:23.680278', '2011-06-12 01:30:23.680278')
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 111ms
+
+
+Started GET "/users/3" for 127.0.0.1 at 2011-06-11 18:30:23 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 33ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-06-11 18:30:29 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (5.2ms)
+Rendered user_sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 76ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-06-11 18:30:35 -0700
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user_session"=>{"username"=>"demo", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users".username LIKE 'demo') LIMIT 1
+Redirected to http://localhost:3000/users
+Completed 302 Found in 73ms
+
+
+Started GET "/users" for 127.0.0.1 at 2011-06-11 18:30:36 -0700
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 35ms (Views: 17.3ms | ActiveRecord: 0.3ms)
