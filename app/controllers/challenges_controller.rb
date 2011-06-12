@@ -19,6 +19,7 @@ class ChallengesController < ApplicationController
   def create
     @challenge = Challenge.new(params[:challenge])
     @challenge[:user_from_id] = current_user.id
+    @challenge[:complete_dt] = nil;
     if @challenge.save
       redirect_to @challenge, :notice => "Successfully created challenge."
     else

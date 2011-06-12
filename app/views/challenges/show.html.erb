@@ -12,6 +12,13 @@
   <strong>Challenge Txt:</strong>
   <%= @challenge.challenge_txt %>
 </p>
+<% if @challenge.accepted.nil?%>
+	<%= form_for @challenge do |f| %>
+		<%= f.radio_button :accepted, 0 %>
+		<%= f.radio_button :accepted, 1 %>
+		<%= f.submit %>>
+	<% end %>
+<% end %>
 <p>
   <strong>Challenge Tm:</strong>
   <%= @challenge.challenge_tm %>
@@ -32,11 +39,22 @@
   <strong>Due Dt:</strong>
   <%= @challenge.due_dt %>
 </p>
+<% if !@challenge.complete_dt.nil?%>
+	<H2>I've done it!!! Hurray!</H2>	
+<% else %>
+	<%= form_for @challenge do |f| %>
+	<%= f.hidden_field(:complete_dt, :value => Date.current) %>
+	
+	<%= f.submit 'I have completed it!'%>
+	<% end %>
+<% end %>
 <p>
   <strong>Complete Dt:</strong>
   <%= @challenge.complete_dt %>
 </p>
+</p>
 
+<%#= submit_tag(value = "Save changes", options = {}) %>
 <p>
   <%= link_to "Edit", edit_challenge_path(@challenge) %> |
   <%= link_to "Destroy", @challenge, :confirm => 'Are you sure?', :method => :delete %> |

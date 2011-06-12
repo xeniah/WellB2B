@@ -1728,3 +1728,826 @@ Started GET "/challenges" for 127.0.0.1 at 2011-06-11 19:30:32 -0700
   [1m[36mChallenge Load (0.4ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_from_id" = 3[0m
 Rendered challenges/index.html.erb within layouts/application (51.6ms)
 Completed 200 OK in 142ms (Views: 55.6ms | ActiveRecord: 0.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-11 19:58:06 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (4.8ms)
+Rendered user_sessions/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 41ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-06-11 19:58:13 -0700
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user_session"=>{"username"=>"demo", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users".username LIKE 'demo') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 161ms
+
+
+Started GET "/users/3" for 127.0.0.1 at 2011-06-11 19:58:13 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 36ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2011-06-11 19:58:18 -0700
+  Processing by ChallengesController#new as HTML
+Rendered challenges/_form.html.erb (89.4ms)
+Rendered challenges/new.html.erb within layouts/application (93.3ms)
+Completed 200 OK in 108ms (Views: 97.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challenges/" for 127.0.0.1 at 2011-06-11 19:58:23 -0700
+  Processing by ChallengesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mChallenge Load (0.4ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_from_id" = 3
+Rendered challenges/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 103ms (Views: 17.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/challenges" for 127.0.0.1 at 2011-06-11 19:58:33 -0700
+  Processing by ChallengesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mChallenge Load (0.4ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_from_id" = 3[0m
+Rendered challenges/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 102ms (Views: 16.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/challenges/" for 127.0.0.1 at 2011-06-11 19:58:36 -0700
+  Processing by ChallengesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mChallenge Load (0.4ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_from_id" = 3
+Rendered challenges/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 101ms (Views: 16.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/challenges/" for 127.0.0.1 at 2011-06-11 19:59:44 -0700
+  Processing by ChallengesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mChallenge Load (0.4ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_from_id" = 3[0m
+Rendered challenges/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 104ms (Views: 17.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 19:59:47 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChallenge Load (0.4ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1
+ERROR: compiling _app_views_challenges_show_html_erb___1678298092043086924_2158195900_3745966098334132095 RAISED /Users/xeniah/xendev/SW/WellB2B/app/views/challenges/show.html.erb:47: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/xeniah/xendev/SW/WellB2B/app/views/challenges/show.html.erb:49: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_challenges_show_html_erb___1678298092043086924_2158195900_3745966098334132095(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "challenges/show";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new; title "Challenge" 
+@output_buffer.append=  form_for @challenge do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('<p>
+  <strong>User From:</strong>
+  ');@output_buffer.append= ( @challenge.user_from_id );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>User To:</strong>
+  ');@output_buffer.append= ( @challenge.user_to_id );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Challenge Txt:</strong>
+  ');@output_buffer.append= ( @challenge.challenge_txt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Challenge Tm:</strong>
+  ');@output_buffer.append= ( @challenge.challenge_tm );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Send Dt:</strong>
+  ');@output_buffer.append= ( @challenge.send_dt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Accepted:</strong>
+  ');@output_buffer.append= ( @challenge.accepted );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Accepted Dt:</strong>
+  ');@output_buffer.append= ( @challenge.accepted_dt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Due Dt:</strong>
+  ');@output_buffer.append= ( @challenge.due_dt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Complete Dt:</strong>
+  ');@output_buffer.append= ( @challenge.complete_dt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('</p>
+');
+@output_buffer.safe_concat('<p>
+  ');@output_buffer.append= ( link_to "Edit", edit_challenge_path(@challenge) );@output_buffer.safe_concat(' |
+  ');@output_buffer.append= ( link_to "Destroy", @challenge, :confirm => 'Are you sure?', :method => :delete );@output_buffer.safe_concat(' |
+  ');@output_buffer.append= ( link_to "View All", challenges_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:255:in `module_eval'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:255:in `compile'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:134:in `block in render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:54:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:127:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:26:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:441:in `_run__2466139267519783962__process_action__4060187871613248313__callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/base.rb:119:in `process'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal.rb:178:in `block in action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:89:in `optimized_each'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:12:in `cache'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:31:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/rack/logger.rb:13:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/application.rb:168:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/application.rb:77:in `method_missing'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered challenges/show.html.erb within layouts/application (16.6ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (/Users/xeniah/xendev/SW/WellB2B/app/views/challenges/show.html.erb:47: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/xeniah/xendev/SW/WellB2B/app/views/challenges/show.html.erb:49: syntax error, unexpected $end, expecting keyword_end):
+    44:   <%= link_to "View All", challenges_path %>
+    45: </p>
+  
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (49.7ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (55.7ms)
+
+
+Started GET "/challenges/" for 127.0.0.1 at 2011-06-11 20:00:22 -0700
+  Processing by ChallengesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mChallenge Load (0.4ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_from_id" = 3[0m
+Rendered challenges/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 111ms (Views: 20.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 20:00:24 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChallenge Load (0.4ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 69ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 20:02:02 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChallenge Load (0.4ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1[0m
+Rendered challenges/show.html.erb within layouts/application (54.7ms)
+Completed 200 OK in 70ms (Views: 58.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 20:04:53 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChallenge Load (0.3ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 77ms (Views: 64.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/challenges/1" for 127.0.0.1 at 2011-06-11 20:04:56 -0700
+  Processing by ChallengesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "accepted"=>"1", "commit"=>"Update Challenge", "id"=>"1"}
+  [1m[36mChallenge Load (0.5ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/challenges/1
+Completed 302 Found in 66ms
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 20:04:56 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 46ms (Views: 24.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/challenges/1" for 127.0.0.1 at 2011-06-11 20:05:07 -0700
+  Processing by ChallengesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "accepted"=>"0", "commit"=>"Update Challenge", "id"=>"1"}
+  [1m[36mChallenge Load (0.3ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/challenges/1
+Completed 302 Found in 27ms
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 20:05:07 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChallenge Load (0.3ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 74ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/challenges/1" for 127.0.0.1 at 2011-06-11 20:05:10 -0700
+  Processing by ChallengesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "accepted"=>"1", "commit"=>"Update Challenge", "id"=>"1"}
+  [1m[36mChallenge Load (0.4ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/challenges/1
+Completed 302 Found in 89ms
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 20:05:10 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChallenge Load (0.4ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 76ms (Views: 64.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 20:06:45 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChallenge Load (0.4ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1[0m
+Rendered challenges/show.html.erb within layouts/application (62.3ms)
+Completed 200 OK in 79ms (Views: 66.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/challenges/1" for 127.0.0.1 at 2011-06-11 20:06:48 -0700
+  Processing by ChallengesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"accepted"=>"1"}, "commit"=>"Update Challenge", "id"=>"1"}
+  [1m[35mChallenge Load (0.4ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "challenges" SET "accepted" = 1, "updated_at" = '2011-06-12 03:06:48.601649' WHERE "challenges"."id" = 1[0m
+Redirected to http://localhost:3000/challenges/1
+Completed 302 Found in 30ms
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 20:06:48 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChallenge Load (0.3ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 44ms (Views: 31.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/challenges/1" for 127.0.0.1 at 2011-06-11 20:06:54 -0700
+  Processing by ChallengesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"accepted"=>"0"}, "commit"=>"Update Challenge", "id"=>"1"}
+  [1m[36mChallenge Load (0.3ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE "challenges" SET "accepted" = 0, "updated_at" = '2011-06-12 03:06:54.868504' WHERE "challenges"."id" = 1
+Redirected to http://localhost:3000/challenges/1
+Completed 302 Found in 31ms
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 20:06:54 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChallenge Load (0.2ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1[0m
+Rendered challenges/show.html.erb within layouts/application (56.4ms)
+Completed 200 OK in 74ms (Views: 62.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/challenges/1" for 127.0.0.1 at 2011-06-11 20:06:56 -0700
+  Processing by ChallengesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"accepted"=>"1"}, "commit"=>"Update Challenge", "id"=>"1"}
+  [1m[35mChallenge Load (0.3ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1
+  [1m[36mAREL (0.8ms)[0m  [1mUPDATE "challenges" SET "accepted" = 1, "updated_at" = '2011-06-12 03:06:57.055614' WHERE "challenges"."id" = 1[0m
+Redirected to http://localhost:3000/challenges/1
+Completed 302 Found in 70ms
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 20:06:57 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChallenge Load (0.3ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 37ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/challenges/1" for 127.0.0.1 at 2011-06-11 20:07:00 -0700
+  Processing by ChallengesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"accepted"=>"0"}, "commit"=>"Update Challenge", "id"=>"1"}
+  [1m[36mChallenge Load (0.3ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE "challenges" SET "accepted" = 0, "updated_at" = '2011-06-12 03:07:00.118557' WHERE "challenges"."id" = 1
+Redirected to http://localhost:3000/challenges/1
+Completed 302 Found in 28ms
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 20:07:00 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChallenge Load (0.3ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1[0m
+Rendered challenges/show.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 74ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/challenges/1" for 127.0.0.1 at 2011-06-11 20:08:19 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChallenge Load (0.3ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 1 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 78ms (Views: 65.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/challenges" for 127.0.0.1 at 2011-06-11 20:08:23 -0700
+  Processing by ChallengesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mChallenge Load (0.2ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_from_id" = 3[0m
+Rendered challenges/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 101ms (Views: 16.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2011-06-11 20:08:27 -0700
+  Processing by ChallengesController#new as HTML
+Rendered challenges/_form.html.erb (21.9ms)
+Rendered challenges/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 41ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 20:08:47 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"1", "challenge_txt"=>"Make me jump", "challenge_tm"=>"", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 1, 'Make me jump', NULL, '2011-06-12', NULL, '2011-06-12', '2011-06-12', '2011-06-12', '2011-06-12 03:08:47.470612', '2011-06-12 03:08:47.470612')
+Redirected to http://localhost:3000/challenges/2
+Completed 302 Found in 149ms
+
+
+Started GET "/challenges/2" for 127.0.0.1 at 2011-06-11 20:08:47 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChallenge Load (0.4ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 2 LIMIT 1[0m
+Rendered challenges/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 37ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/challenges/2" for 127.0.0.1 at 2011-06-11 20:08:53 -0700
+  Processing by ChallengesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"accepted"=>"0"}, "commit"=>"Update Challenge", "id"=>"2"}
+  [1m[35mChallenge Load (0.4ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 2 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "challenges" SET "accepted" = 0, "updated_at" = '2011-06-12 03:08:53.155150' WHERE "challenges"."id" = 2[0m
+Redirected to http://localhost:3000/challenges/2
+Completed 302 Found in 30ms
+
+
+Started GET "/challenges/2" for 127.0.0.1 at 2011-06-11 20:08:53 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChallenge Load (0.4ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 2 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 73ms (Views: 23.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/challenges/2" for 127.0.0.1 at 2011-06-11 20:20:28 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChallenge Load (0.5ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 2 LIMIT 1[0m
+Rendered challenges/show.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 78ms (Views: 22.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/challenges/2" for 127.0.0.1 at 2011-06-11 20:21:04 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 2 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 75ms (Views: 62.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 20:22:30 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"1", "challenge_txt"=>"Make me jump 10 times", "challenge_tm"=>"", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 1, 'Make me jump 10 times', NULL, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 03:22:30.800807', '2011-06-12 03:22:30.800807')[0m
+Redirected to http://localhost:3000/challenges/3
+Completed 302 Found in 114ms
+
+
+Started GET "/challenges/3" for 127.0.0.1 at 2011-06-11 20:22:30 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 3 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 35ms (Views: 23.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/challenges/3" for 127.0.0.1 at 2011-06-11 20:28:05 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mChallenge Load (0.6ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 3 LIMIT 1[0m
+ERROR: compiling _app_views_challenges_show_html_erb___1678298092043086924_2159979560_3745966098334132095 RAISED /Users/xeniah/xendev/SW/WellB2B/app/views/challenges/show.html.erb:62: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/xeniah/xendev/SW/WellB2B/app/views/challenges/show.html.erb:64: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_challenges_show_html_erb___1678298092043086924_2159979560_3745966098334132095(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "challenges/show";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new; title "Challenge" 
+@output_buffer.safe_concat('
+<p>
+  <strong>User From:</strong>
+  ');@output_buffer.append= ( @challenge.user_from_id );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>User To:</strong>
+  ');@output_buffer.append= ( @challenge.user_to_id );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Challenge Txt:</strong>
+  ');@output_buffer.append= ( @challenge.challenge_txt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+'); if @challenge.accepted.nil?
+@output_buffer.safe_concat('	');@output_buffer.append=  form_for @challenge do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('		');@output_buffer.append= ( f.radio_button :accepted, 0 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		');@output_buffer.append= ( f.radio_button :accepted, 1 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('>
+');	 end 
+ end 
+@output_buffer.safe_concat('<p>
+  <strong>Challenge Tm:</strong>
+  ');@output_buffer.append= ( @challenge.challenge_tm );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Send Dt:</strong>
+  ');@output_buffer.append= ( @challenge.send_dt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Accepted:</strong>
+  ');@output_buffer.append= ( @challenge.accepted );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Accepted Dt:</strong>
+  ');@output_buffer.append= ( @challenge.accepted_dt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Due Dt:</strong>
+  ');@output_buffer.append= ( @challenge.due_dt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+'); if !@challenge.complete_dt.nil?
+@output_buffer.safe_concat('	<H2>I\'ve done it!!! Hurray!</H2>	
+'); else 
+@output_buffer.safe_concat('	');@output_buffer.append=  form_for @challenge.complete_dt do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('>
+');
+ end 
+@output_buffer.safe_concat('<p>
+  <strong>Complete Dt:</strong>
+  ');@output_buffer.append= ( @challenge.complete_dt );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+</p>
+
+');
+@output_buffer.safe_concat('<p>
+  ');@output_buffer.append= ( link_to "Edit", edit_challenge_path(@challenge) );@output_buffer.safe_concat(' |
+  ');@output_buffer.append= ( link_to "Destroy", @challenge, :confirm => 'Are you sure?', :method => :delete );@output_buffer.safe_concat(' |
+  ');@output_buffer.append= ( link_to "View All", challenges_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:255:in `module_eval'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:255:in `compile'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:134:in `block in render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:54:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:127:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:26:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:441:in `_run__2466139267519783962__process_action__4060187871613248313__callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/base.rb:119:in `process'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal.rb:178:in `block in action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:89:in `optimized_each'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:12:in `cache'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:31:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/rack/logger.rb:13:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/application.rb:168:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/application.rb:77:in `method_missing'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered challenges/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (/Users/xeniah/xendev/SW/WellB2B/app/views/challenges/show.html.erb:62: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/xeniah/xendev/SW/WellB2B/app/views/challenges/show.html.erb:64: syntax error, unexpected $end, expecting keyword_end):
+    59:   <%= link_to "View All", challenges_path %>
+    60: </p>
+  
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.8ms)
+
+
+Started GET "/challenges/3" for 127.0.0.1 at 2011-06-11 20:28:21 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mChallenge Load (0.7ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 3 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 73ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    42: <% if !@challenge.complete_dt.nil?%>
+    43: 	<H2>I've done it!!! Hurray!</H2>	
+    44: <% else %>
+    45: 	<%= form_for @challenge.complete_dt do |f| %>
+    46: 	<%= f.submit %>>
+    47: 	<% end %>
+    48: <% end %>
+  app/views/challenges/show.html.erb:45:in `_app_views_challenges_show_html_erb___1678298092043086924_2169696700_3745966098334132095'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/challenges/3" for 127.0.0.1 at 2011-06-11 20:28:56 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mChallenge Load (0.6ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 3 LIMIT 1[0m
+Rendered challenges/show.html.erb within layouts/application (61.1ms)
+Completed 200 OK in 79ms (Views: 65.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/challenges/3" for 127.0.0.1 at 2011-06-11 20:31:48 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mChallenge Load (0.6ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 3 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (58.6ms)
+Completed 500 Internal Server Error in 76ms
+
+ActionView::Template::Error (undefined method `merge' for 2011-06-11 20:31:48 -0700:Time):
+    43: 	<H2>I've done it!!! Hurray!</H2>	
+    44: <% else %>
+    45: 	<%= form_for @challenge do |f| %>
+    46: 	<%= f.hidden_field(:complete_dt, Time.now()) %>
+    47: 	<%= f.submit 'I have completed it!'%>
+    48: 	<% end %>
+    49: <% end %>
+  app/views/challenges/show.html.erb:46:in `block in _app_views_challenges_show_html_erb___1678298092043086924_2157072500_3745966098334132095'
+  app/views/challenges/show.html.erb:45:in `_app_views_challenges_show_html_erb___1678298092043086924_2157072500_3745966098334132095'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/challenges/3" for 127.0.0.1 at 2011-06-11 20:33:14 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mChallenge Load (0.7ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 3 LIMIT 1[0m
+Rendered challenges/show.html.erb within layouts/application (66.9ms)
+Completed 500 Internal Server Error in 84ms
+
+ActionView::Template::Error (undefined method `merge' for Sun, 12 Jun 2011:Date):
+    43: 	<H2>I've done it!!! Hurray!</H2>	
+    44: <% else %>
+    45: 	<%= form_for @challenge do |f| %>
+    46: 	<%= f.hidden_field(:complete_dt, Date.current) %>
+    47: 	<%= f.submit 'I have completed it!'%>
+    48: 	<% end %>
+    49: <% end %>
+  app/views/challenges/show.html.erb:46:in `block in _app_views_challenges_show_html_erb___1678298092043086924_2156705780_3745966098334132095'
+  app/views/challenges/show.html.erb:45:in `_app_views_challenges_show_html_erb___1678298092043086924_2156705780_3745966098334132095'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/challenges/3" for 127.0.0.1 at 2011-06-11 20:34:48 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 3 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (59.9ms)
+Completed 500 Internal Server Error in 78ms
+
+ActionView::Template::Error (undefined method `merge' for "2011-06-12":String):
+    43: 	<H2>I've done it!!! Hurray!</H2>	
+    44: <% else %>
+    45: 	<%= form_for @challenge do |f| %>
+    46: 	<%= f.hidden_field(:complete_dt, Date.current.to_s) %>
+    47: 	<%= f.submit 'I have completed it!'%>
+    48: 	<% end %>
+    49: <% end %>
+  app/views/challenges/show.html.erb:46:in `block in _app_views_challenges_show_html_erb___1678298092043086924_2157224820_3745966098334132095'
+  app/views/challenges/show.html.erb:45:in `_app_views_challenges_show_html_erb___1678298092043086924_2157224820_3745966098334132095'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/challenges/3" for 127.0.0.1 at 2011-06-11 20:36:00 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mChallenge Load (0.8ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 3 LIMIT 1[0m
+Rendered challenges/show.html.erb within layouts/application (18.3ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (wrong number of arguments (3 for 2)):
+    43: 	<H2>I've done it!!! Hurray!</H2>	
+    44: <% else %>
+    45: 	<%= form_for @challenge do |f| %>
+    46: 	<%= f.hidden_field(@challenge, :complete_dt, Date.current.to_s) %>
+    47: 	
+    48: 	<%= f.submit 'I have completed it!'%>
+    49: 	<% end %>
+  app/views/challenges/show.html.erb:46:in `block in _app_views_challenges_show_html_erb___1678298092043086924_2158255600_3745966098334132095'
+  app/views/challenges/show.html.erb:45:in `_app_views_challenges_show_html_erb___1678298092043086924_2158255600_3745966098334132095'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (42.3ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (51.9ms)
+
+
+Started GET "/challenges/3" for 127.0.0.1 at 2011-06-11 20:36:15 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mChallenge Load (0.8ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 3 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 39ms
+
+ActionView::Template::Error (undefined method `merge' for :complete_dt:Symbol):
+    43: 	<H2>I've done it!!! Hurray!</H2>	
+    44: <% else %>
+    45: 	<%= form_for @challenge do |f| %>
+    46: 	<%= f.hidden_field(@challenge, :complete_dt) %>
+    47: 	
+    48: 	<%= f.submit 'I have completed it!'%>
+    49: 	<% end %>
+  app/views/challenges/show.html.erb:46:in `block in _app_views_challenges_show_html_erb___1678298092043086924_2159558660_3745966098334132095'
+  app/views/challenges/show.html.erb:45:in `_app_views_challenges_show_html_erb___1678298092043086924_2159558660_3745966098334132095'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/challenges/3" for 127.0.0.1 at 2011-06-11 20:37:44 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mChallenge Load (0.7ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 3 LIMIT 1[0m
+Rendered challenges/show.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 39ms (Views: 24.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/challenges/3" for 127.0.0.1 at 2011-06-11 20:37:47 -0700
+  Processing by ChallengesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"complete_dt"=>"2011-06-12"}, "commit"=>"I have completed it!", "id"=>"3"}
+  [1m[35mChallenge Load (0.6ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 3 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "challenges" SET "complete_dt" = '2011-06-12', "updated_at" = '2011-06-12 03:37:47.567531' WHERE "challenges"."id" = 3[0m
+Redirected to http://localhost:3000/challenges/3
+Completed 302 Found in 33ms
+
+
+Started GET "/challenges/3" for 127.0.0.1 at 2011-06-11 20:37:47 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 3 LIMIT 1
+Rendered challenges/show.html.erb within layouts/application (56.7ms)
+Completed 200 OK in 73ms (Views: 60.8ms | ActiveRecord: 0.5ms)
