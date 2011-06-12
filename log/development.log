@@ -3799,3 +3799,473 @@ Started GET "/challenges/sent_challenges/3" for 127.0.0.1 at 2011-06-11 21:15:21
   [1m[36mChallenge Load (4.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_from_id" = 3[0m
 Rendered challenges/sent_challenges.erb within layouts/application (65.6ms)
 Completed 200 OK in 160ms (Views: 69.9ms | ActiveRecord: 4.3ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-11 21:18:49 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (6.1ms)
+Rendered user_sessions/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 40ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-06-11 21:18:57 -0700
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user_session"=>{"username"=>"demo", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users".username LIKE 'demo') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 182ms
+
+
+Started GET "/users/3" for 127.0.0.1 at 2011-06-11 21:18:57 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 50ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2011-06-11 21:18:59 -0700
+  Processing by ChallengesController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Rendered challenges/_form.html.erb (117.7ms)
+Rendered challenges/new.html.erb within layouts/application (121.9ms)
+Completed 200 OK in 136ms (Views: 125.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:19:07 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"kjmynhtbgrvfec", "challenge_tm"=>"nhtbgrvfec", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'kjmynhtbgrvfec', 0, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:19:08.082513', '2011-06-12 04:19:08.082513')[0m
+Redirected to http://localhost:3000index
+Completed 302 Found in 107ms
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:19:08 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"kjmynhtbgrvfec", "challenge_tm"=>"nhtbgrvfec", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'kjmynhtbgrvfec', 0, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:19:08.216285', '2011-06-12 04:19:08.216285')
+Redirected to http://localhost:3000index
+Completed 302 Found in 101ms
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:19:08 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"kjmynhtbgrvfec", "challenge_tm"=>"nhtbgrvfec", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'kjmynhtbgrvfec', 0, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:19:08.383257', '2011-06-12 04:19:08.383257')[0m
+Redirected to http://localhost:3000index
+Completed 302 Found in 104ms
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:19:08 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"kjmynhtbgrvfec", "challenge_tm"=>"nhtbgrvfec", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'kjmynhtbgrvfec', 0, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:19:08.517444', '2011-06-12 04:19:08.517444')
+Redirected to http://localhost:3000index
+Completed 302 Found in 145ms
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:19:08 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"kjmynhtbgrvfec", "challenge_tm"=>"nhtbgrvfec", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'kjmynhtbgrvfec', 0, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:19:08.687914', '2011-06-12 04:19:08.687914')[0m
+Redirected to http://localhost:3000index
+Completed 302 Found in 107ms
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:19:08 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"kjmynhtbgrvfec", "challenge_tm"=>"nhtbgrvfec", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'kjmynhtbgrvfec', 0, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:19:08.819978', '2011-06-12 04:19:08.819978')
+Redirected to http://localhost:3000index
+Completed 302 Found in 107ms
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:19:08 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"kjmynhtbgrvfec", "challenge_tm"=>"nhtbgrvfec", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'kjmynhtbgrvfec', 0, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:19:08.987883', '2011-06-12 04:19:08.987883')[0m
+Redirected to http://localhost:3000index
+Completed 302 Found in 183ms
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:20:30 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"kjmynhtbgrvfec", "challenge_tm"=>"nhtbgrvfec", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'kjmynhtbgrvfec', 0, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:20:30.219987', '2011-06-12 04:20:30.219987')
+Rendered challenges/sent_challenges.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 129ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    12:     <th>Due Dt</th>
+    13:     <th>Complete Dt</th>
+    14:   </tr>
+    15:   <% for challenge in @challenges %>
+    16:     <tr>
+    17:       <td><%= challenge.user_from_id %></td>
+    18:       <td><%= challenge.user_to_id %></td>
+  app/views/challenges/sent_challenges.erb:15:in `_app_views_challenges_sent_challenges_erb___1813394516921045309_2174054540_4546486061770756116'
+  app/controllers/challenges_controller.rb:22:in `create'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.7ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.8ms)
+
+
+Started GET "/challenges/my_challenges/3" for 127.0.0.1 at 2011-06-11 21:21:10 -0700
+  Processing by ChallengesController#my_challenges as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mChallenge Load (2.3ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_to_id" = 3[0m
+Rendered challenges/my_challenges.html.erb within layouts/application (57.6ms)
+Completed 200 OK in 145ms (Views: 61.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/challenges/sent_challenges/3" for 127.0.0.1 at 2011-06-11 21:21:19 -0700
+  Processing by ChallengesController#sent_challenges as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mChallenge Load (6.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_from_id" = 3
+Rendered challenges/sent_challenges.erb within layouts/application (36.0ms)
+Completed 200 OK in 133ms (Views: 40.1ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2011-06-11 21:22:18 -0700
+  Processing by ChallengesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered challenges/_form.html.erb (97.6ms)
+Rendered challenges/new.html.erb within layouts/application (101.5ms)
+Completed 200 OK in 116ms (Views: 105.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:22:26 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"nubijorve,l;c", "challenge_tm"=>"", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'nubijorve,l;c', NULL, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:22:26.515073', '2011-06-12 04:22:26.515073')
+Rendered challenges/sent_challenges.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 148ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    12:     <th>Due Dt</th>
+    13:     <th>Complete Dt</th>
+    14:   </tr>
+    15:   <% for challenge in @challenges %>
+    16:     <tr>
+    17:       <td><%= challenge.user_from_id %></td>
+    18:       <td><%= challenge.user_to_id %></td>
+  app/views/challenges/sent_challenges.erb:15:in `_app_views_challenges_sent_challenges_erb___1813394516921045309_2174411680_4546486061770756116'
+  app/controllers/challenges_controller.rb:22:in `create'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.3ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:25:07 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"nubijorve,l;c", "challenge_tm"=>"", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'nubijorve,l;c', NULL, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:25:07.804471', '2011-06-12 04:25:07.804471')[0m
+Redirected to http://localhost:3000/challenges/sent_challenges
+Completed 302 Found in 110ms
+
+
+Started GET "/challenges/sent_challenges" for 127.0.0.1 at 2011-06-11 21:25:07 -0700
+  Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"sent_challenges"}
+  [1m[35mChallenge Load (0.3ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 0 LIMIT 1
+Completed 404 Not Found in 49ms
+
+ActiveRecord::RecordNotFound (Couldn't find Challenge with ID=sent_challenges):
+  app/controllers/challenges_controller.rb:10:in `show'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2011-06-11 21:26:56 -0700
+  Processing by ChallengesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered challenges/_form.html.erb (102.7ms)
+Rendered challenges/new.html.erb within layouts/application (106.7ms)
+Completed 200 OK in 123ms (Views: 110.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:26:58 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"nubijorve,l;c", "challenge_tm"=>"", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'nubijorve,l;c', NULL, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:26:58.549968', '2011-06-12 04:26:58.549968')
+Rendered challenges/sent_challenges.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 148ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    12:     <th>Due Dt</th>
+    13:     <th>Complete Dt</th>
+    14:   </tr>
+    15:   <% for challenge in @challenges %>
+    16:     <tr>
+    17:       <td><%= challenge.user_from_id %></td>
+    18:       <td><%= challenge.user_to_id %></td>
+  app/views/challenges/sent_challenges.erb:15:in `_app_views_challenges_sent_challenges_erb___1813394516921045309_2174362840_4546486061770756116'
+  app/controllers/challenges_controller.rb:22:in `create'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.9ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:28:08 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"nubijorve,l;c", "challenge_tm"=>"", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'nubijorve,l;c', NULL, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:28:08.679376', '2011-06-12 04:28:08.679376')[0m
+Rendered challenges/sent_challenges.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 123ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    12:     <th>Due Dt</th>
+    13:     <th>Complete Dt</th>
+    14:   </tr>
+    15:   <% for challenge in @challenges %>
+    16:     <tr>
+    17:       <td><%= challenge.user_from_id %></td>
+    18:       <td><%= challenge.user_to_id %></td>
+  app/views/challenges/sent_challenges.erb:15:in `_app_views_challenges_sent_challenges_erb___1813394516921045309_2173586180_4546486061770756116'
+  app/controllers/challenges_controller.rb:22:in `create'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.9ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (49.9ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:28:32 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"nubijorve,l;c", "challenge_tm"=>"", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'nubijorve,l;c', NULL, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:28:32.222820', '2011-06-12 04:28:32.222820')
+Rendered challenges/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 114ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    12:     <th>Due Dt</th>
+    13:     <th>Complete Dt</th>
+    14:   </tr>
+    15:   <% for challenge in @challenges %>
+    16:     <tr>
+    17:       <td><%= challenge.user_from_id %></td>
+    18:       <td><%= challenge.user_to_id %></td>
+  app/views/challenges/index.html.erb:15:in `_app_views_challenges_index_html_erb___4395550547443758958_2174204380_4546486061770756116'
+  app/controllers/challenges_controller.rb:25:in `create'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.8ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:29:27 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"nubijorve,l;c", "challenge_tm"=>"", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'nubijorve,l;c', NULL, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:29:27.964797', '2011-06-12 04:29:27.964797')[0m
+Rendered challenges/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 114ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    12:     <th>Due Dt</th>
+    13:     <th>Complete Dt</th>
+    14:   </tr>
+    15:   <% for challenge in @challenges %>
+    16:     <tr>
+    17:       <td><%= challenge.user_from_id %></td>
+    18:       <td><%= challenge.user_to_id %></td>
+  app/views/challenges/index.html.erb:15:in `_app_views_challenges_index_html_erb___4395550547443758958_2158480420_4546486061770756116'
+  app/controllers/challenges_controller.rb:25:in `create'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.8ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:30:43 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"nubijorve,l;c", "challenge_tm"=>"", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'nubijorve,l;c', NULL, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:30:43.340190', '2011-06-12 04:30:43.340190')
+Rendered challenges/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 114ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    12:     <th>Due Dt</th>
+    13:     <th>Complete Dt</th>
+    14:   </tr>
+    15:   <% for challenge in @challenges %>
+    16:     <tr>
+    17:       <td><%= challenge.user_from_id %></td>
+    18:       <td><%= challenge.user_to_id %></td>
+  app/views/challenges/index.html.erb:15:in `_app_views_challenges_index_html_erb___4395550547443758958_2173960500_4546486061770756116'
+  app/controllers/challenges_controller.rb:25:in `create'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.7ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2011-06-11 21:30:47 -0700
+  Processing by ChallengesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered challenges/_form.html.erb (110.2ms)
+Rendered challenges/new.html.erb within layouts/application (115.6ms)
+Completed 200 OK in 171ms (Views: 119.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:30:48 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"nubijorve,l;c", "challenge_tm"=>"", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'nubijorve,l;c', NULL, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:30:49.118098', '2011-06-12 04:30:49.118098')
+Rendered challenges/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 113ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    12:     <th>Due Dt</th>
+    13:     <th>Complete Dt</th>
+    14:   </tr>
+    15:   <% for challenge in @challenges %>
+    16:     <tr>
+    17:       <td><%= challenge.user_from_id %></td>
+    18:       <td><%= challenge.user_to_id %></td>
+  app/views/challenges/index.html.erb:15:in `_app_views_challenges_index_html_erb___4395550547443758958_2173654460_4546486061770756116'
+  app/controllers/challenges_controller.rb:25:in `create'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.9ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.9ms)
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2011-06-11 21:31:25 -0700
+  Processing by ChallengesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered challenges/_form.html.erb (104.2ms)
+Rendered challenges/new.html.erb within layouts/application (108.4ms)
+Completed 200 OK in 123ms (Views: 112.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:31:27 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"nubijorve,l;c", "challenge_tm"=>"", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'nubijorve,l;c', NULL, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:31:27.962619', '2011-06-12 04:31:27.962619')
+Rendered challenges/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 121ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    12:     <th>Due Dt</th>
+    13:     <th>Complete Dt</th>
+    14:   </tr>
+    15:   <% for challenge in @challenges %>
+    16:     <tr>
+    17:       <td><%= challenge.user_from_id %></td>
+    18:       <td><%= challenge.user_to_id %></td>
+  app/views/challenges/index.html.erb:15:in `_app_views_challenges_index_html_erb___4395550547443758958_2159198120_4546486061770756116'
+  app/controllers/challenges_controller.rb:25:in `create'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (43.5ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (48.7ms)
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2011-06-11 21:33:04 -0700
+  Processing by ChallengesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered challenges/_form.html.erb (107.1ms)
+Rendered challenges/new.html.erb within layouts/application (111.5ms)
+Completed 200 OK in 129ms (Views: 116.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:33:05 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"nubijorve,l;c", "challenge_tm"=>"", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'nubijorve,l;c', NULL, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:33:05.493058', '2011-06-12 04:33:05.493058')
+  [1m[36mChallenge Load (12.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_from_id" = 3[0m
+Rendered challenges/sent_challenges.html.erb within layouts/application (52.7ms)
+Completed 200 OK in 202ms (Views: 45.2ms | ActiveRecord: 12.6ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-11 21:33:10 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"3", "user_to_id"=>"3", "challenge_txt"=>"nubijorve,l;c", "challenge_tm"=>"", "send_dt(1i)"=>"2011", "send_dt(2i)"=>"6", "send_dt(3i)"=>"12", "accepted"=>"", "accepted_dt(1i)"=>"2011", "accepted_dt(2i)"=>"6", "accepted_dt(3i)"=>"12", "due_dt(1i)"=>"2011", "due_dt(2i)"=>"6", "due_dt(3i)"=>"12", "complete_dt(1i)"=>"2011", "complete_dt(2i)"=>"6", "complete_dt(3i)"=>"12"}, "commit"=>"Create Challenge"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (3, 3, 'nubijorve,l;c', NULL, '2011-06-12', NULL, '2011-06-12', '2011-06-12', NULL, '2011-06-12 04:33:10.873996', '2011-06-12 04:33:10.873996')
+  [1m[36mChallenge Load (12.8ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_from_id" = 3[0m
+Rendered challenges/sent_challenges.html.erb within layouts/application (92.8ms)
+Completed 200 OK in 200ms (Views: 84.6ms | ActiveRecord: 13.4ms)
