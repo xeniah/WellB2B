@@ -5,29 +5,39 @@
   <tr>
     <th>From</th>
     <th>Description</th>
-    <th>Complete</th>
-    <th>Send Date</th>
-    <th>Accepted Date</th>
-    <th>Due Date</th>
-    <th>Complete Date</th>
+    <th>Completed On</th>
+	<th>Accepted Date</th>
+    <!-- <th>Send Date</th>       
+       <th>Due Date</th>
+       <th>Complete Date</th> -->
   </tr>
   <% for challenge in @challenges %>
     <tr>
-      <td>	
-			<% user_from = User.find(challenge.user_from_id)%>
-		  	<% if !user_from.nil? %>
+      <td><div style="color:green; font-style:italics;">
+			<% if User.exists?(challenge.user_from_id)	
+			 user_from = User.find(challenge.user_from_id)%>
+		  	<%# if !user_from.nil? %>
 		    	<%= user_from.username %>
 		  	<% end%>
+		  </div>
 	  </td>
       <td><%= challenge.challenge_txt %></td>
-      <td><%= challenge.challenge_tm %></td>
-      <td><%= challenge.send_dt %></td>
-      <td><%= challenge.accepted_dt %></td>
-      <td><%= challenge.due_dt %></td>
+
+	  <td>
+		<% if challenge.accepted == 1 %>
+			<span style="color:orange; font-weight:bold">ACCEPTED!</span>
+		<%else%>
+			<span style="color:red; ">Rejected ...<span style="color:red; font-weght:bold; "> Slacker!</span></span>
+		<% end %>
+		</td>
+      <!-- <td><%#= challenge.challenge_tm %></td>
+            <td><%#= challenge.send_dt %></td>
+            
+            <td><%#= challenge.due_dt %></td> -->
       <td><%= challenge.complete_dt %></td>
-      <td><%= link_to "Show", challenge %></td>
-      <td><%= link_to "Edit", edit_challenge_path(challenge) %></td>
-      <td><%= link_to "Destroy", challenge, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%#= link_to "Show", challenge %></td>
+      <td><%#= link_to "Edit", edit_challenge_path(challenge) %></td>
+      <td><%#= link_to "Destroy", challenge, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>

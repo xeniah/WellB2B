@@ -14,8 +14,9 @@
   <% for challenge in @challenges %>
     <tr>
 	      <td>
-				<% user_to = User.find(challenge.user_to_id)%>
-			  	<% if !user_to.nil? %>
+				<% if User.exists?(challenge.user_to_id)
+					user_to = User.find(challenge.user_to_id) %>
+			  	<%# if !user_to.nil? %>
 			    	<%= user_to.username %>
 			  	<% end%>
 		  </td>
@@ -26,8 +27,8 @@
       <td><%= challenge.accepted_dt %></td>
       <td><%= challenge.due_dt %></td>
       <td><%= challenge.complete_dt %></td>
-      <td><%= link_to "Show", challenge %></td>
-      <td><%= link_to "Edit", edit_challenge_path(challenge) %></td>
+      <td><%#= link_to "Show", challenge %></td>
+      <td><%#= link_to "Edit", edit_challenge_path(challenge) %></td>
       <td><%= link_to "Destroy", challenge, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
