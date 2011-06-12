@@ -2,11 +2,17 @@
 
 <p>
   <strong>User From:</strong>
-  <%= @challenge.user_from_id %>
+  <% user_from = User.find(@challenge.user_from_id)%>
+  <% if !user_from.nil? %>
+    <%= user_from.username %>
+  <% end%>
 </p>
 <p>
   <strong>User To:</strong>
-  <%= @challenge.user_to_id %>
+  <% user_to = User.find(@challenge.user_to_id)%>
+  <% if !user_to.nil? %>
+    <%= user_to.username %>
+  <% end%>
 </p>
 <p>
   <strong>Challenge Txt:</strong>

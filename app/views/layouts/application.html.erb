@@ -27,6 +27,7 @@
 		<% if request[:controller] == 'user_sessions' || 
 			(request[:controller] == 'users' && request[:action] == 'new')%>
 		<% else %>
+		    <%= "Hello, user #{current_user.username}, your user id is #{current_user.id} "%><br/>
 	    	<%= link_to "New Challenge", new_challenge_path %>
 		    <%= link_to "My Challenges",  '/challenges/list/my_challenges' %>
 		    <%= link_to "Sent Challenges","/challenges/list/sent_challenges" %>

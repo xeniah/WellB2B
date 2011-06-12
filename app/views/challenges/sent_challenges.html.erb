@@ -14,8 +14,18 @@
   </tr>
   <% for challenge in @challenges %>
     <tr>
-      <td><%= challenge.user_from_id %></td>
-      <td><%= challenge.user_to_id %></td>
+  		<td>	
+				<% user_from = User.find(challenge.user_from_id)%>
+			  	<% if !user_from.nil? %>
+			    	<%= user_from.username %>
+			  	<% end%>
+		  </td>
+	      <td>
+				<% user_to = User.find(challenge.user_to_id)%>
+			  	<% if !user_to.nil? %>
+			    	<%= user_to.username %>
+			  	<% end%>
+		  </td>
       <td><%= challenge.challenge_txt %></td>
       <td><%= challenge.challenge_tm %></td>
       <td><%= challenge.send_dt %></td>
