@@ -26,8 +26,10 @@
 	  <td>
 		<% if challenge.accepted == 1 %>
 			<span style="color:orange; font-weight:bold">ACCEPTED!</span>
-		<%else%>
+		<%elsif challenge.accepted == 0 %>
 			<span style="color:red; ">Rejected ...<span style="color:red; font-weght:bold; "> Slacker!</span></span>
+		<% else %>
+			
 		<% end %>
 		</td>
       <!-- <td><%#= challenge.challenge_tm %></td>

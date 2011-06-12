@@ -3,7 +3,7 @@ class ChallengesController < ApplicationController
     if current_user.nil?
       redirect_to :controller=>'user_sessions', :action => 'new';
     end
-    @challenges = Challenge.find_all_by_user_from_id(current_user.id)
+    @challenges = [];#Challenge.find_all_by_user_from_id(current_user.id)
   end
 
   def show
@@ -19,8 +19,7 @@ class ChallengesController < ApplicationController
     @challenge[:user_from_id] = current_user.id
     @challenge[:complete_dt] = nil;
     @challenge[:accepted_dt] = nil;
-    if @challenge.save
-      
+    if @challenge.save     
       #render :action => "sent_challenges", :object => @challenges
       #redirect_to :action => "sent_challenges"
       #redirect_to @challenge, :notice => "Successfully created challenge."

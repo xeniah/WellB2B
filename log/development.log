@@ -11908,3 +11908,601 @@ Started GET "/challenges/list/my_challenges" for 127.0.0.1 at 2011-06-12 13:15:1
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
 Rendered challenges/my_challenges.html.erb within layouts/application (150.4ms)
 Completed 200 OK in 155ms (Views: 146.3ms | ActiveRecord: 8.5ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-12 13:31:32 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (4.4ms)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered user_sessions/new.html.erb within layouts/application (134.5ms)
+Completed 200 OK in 163ms (Views: 138.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-06-12 13:31:46 -0700
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user_session"=>{"username"=>"demo", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users".username LIKE 'demo') LIMIT 1
+Redirected to http://localhost:3000/challenges/list/my_challenges
+Completed 302 Found in 95ms
+
+
+Started GET "/challenges/list/my_challenges" for 127.0.0.1 at 2011-06-12 13:31:46 -0700
+  Processing by ChallengesController#my_challenges as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mChallenge Load (9.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_to_id" = 3 ORDER BY created_at DESC[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered challenges/my_challenges.html.erb within layouts/application (179.5ms)
+Completed 200 OK in 185ms (Views: 174.4ms | ActiveRecord: 9.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-12 13:32:28 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.3ms)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered user_sessions/new.html.erb within layouts/application (132.1ms)
+Completed 200 OK in 163ms (Views: 136.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-06-12 13:32:32 -0700
+  Processing by UserSessionsController#destroy as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 81ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-06-12 13:32:32 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.8ms)
+Rendered user_sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 39ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-06-12 13:32:36 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (11.1ms)
+Rendered users/new.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 45ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-06-12 13:33:04 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user"=>{"username"=>"demo", "email"=>"demo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('demo')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."username") = LOWER('demo')) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE ("users"."persistence_token" = 'b0b130ab1873fd5d4e9f2d4ff78d850d0db203670854e6f9706423036cfd761cb3f3e24e169709a3eacffee8a19e85dedfa7d233fc46b85927baa350efed8476') LIMIT 1
+Rendered users/_form.html.erb (8.4ms)
+Rendered users/new.html.erb within layouts/application (55.0ms)
+Completed 500 Internal Server Error in 180ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    28: 		<% if request[:controller] == 'user_sessions' || 
+    29: 			(request[:controller] == 'users' && request[:action] == 'new')%>
+    30: 		<% else %>
+    31: 		    Hello <span style="font-style:italic;color:red;"><%= " #{current_user.username}!"%></span><br/>
+    32:      	<div style="text-align:center">
+    33:     	    	<%= link_to "[New Challenge]\t", new_challenge_path %>
+    34: 		    <%= link_to "[My Challenges]\t",  '/challenges/list/my_challenges' %>
+  app/views/layouts/application.html.erb:31:in `_app_views_layouts_application_html_erb___2021194445070703062_2173079440__2974145820755212255'
+  app/controllers/users_controller.rb:51:in `block (2 levels) in create'
+  app/controllers/users_controller.rb:45:in `create'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-06-12 13:33:23 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user"=>{"username"=>"demo", "email"=>"demo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('demo@gmail.com')) LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."username") = LOWER('demo')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."persistence_token" = 'b702fa822ea0f97a594317917265d84e02f07e3f200dda670a6152d54b1b77290ace0cc7105092ecced74ea29c4113728082ff9345e01ddca1747881ab5d49ae') LIMIT 1[0m
+Rendered users/_form.html.erb (6.6ms)
+Rendered users/new.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 57ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    28: 		<% if request[:controller] == 'user_sessions' || 
+    29: 			(request[:controller] == 'users' && request[:action] == 'new')%>
+    30: 		<% else %>
+    31: 		    Hello <span style="font-style:italic;color:red;"><%= " #{current_user.username}!"%></span><br/>
+    32:      	<div style="text-align:center">
+    33:     	    	<%= link_to "[New Challenge]\t", new_challenge_path %>
+    34: 		    <%= link_to "[My Challenges]\t",  '/challenges/list/my_challenges' %>
+  app/views/layouts/application.html.erb:31:in `_app_views_layouts_application_html_erb___2021194445070703062_2173014360__2974145820755212255'
+  app/controllers/users_controller.rb:51:in `block (2 levels) in create'
+  app/controllers/users_controller.rb:45:in `create'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-06-12 13:36:10 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user"=>{"username"=>"demo", "email"=>"demo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('demo@gmail.com')) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."username") = LOWER('demo')) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE ("users"."persistence_token" = 'd941f7238da82e92ba87997a066a2b699fed6c8c46355bf6aac1b67499e14efaeecf469ff43d689e3d94944b67eb14a5d3b30383a5fd6ec8fa2dd2d77488da0c') LIMIT 1
+Rendered users/_form.html.erb (6.3ms)
+Rendered users/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 65ms (Views: 23.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-06-12 13:36:28 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user"=>{"username"=>"test14", "email"=>"demo14@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('demo14@gmail.com')) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."username") = LOWER('test14')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."persistence_token" = 'eab767911c833b652a8192ca1c1fac78af1ce5b36d08bd7ebe735c88e3e434bb8a8a3aed4f6448ca6a6c899d54a3c966934b2ef06814c1314a05d30be4914e90') LIMIT 1[0m
+  [1m[35mAREL (1.2ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at") VALUES ('test14', 'demo14@gmail.com', '3f920e39c07fcd53879c993b913478f065d1e4dbd3fd7cf0f2a52bd3df4aab4384f9f308a69326de32566faa8b7ddebaa1faa974ac082b6bd0df53f3ceda73b6', 'l2qPNT9Y9yvepbHmRcBw', 'eab767911c833b652a8192ca1c1fac78af1ce5b36d08bd7ebe735c88e3e434bb8a8a3aed4f6448ca6a6c899d54a3c966934b2ef06814c1314a05d30be4914e90', '2011-06-12 20:36:28.531220', '2011-06-12 20:36:28.531220')
+Redirected to http://localhost:3000/challenges/list/my_challenges
+Completed 302 Found in 79ms
+
+
+Started GET "/challenges/list/my_challenges" for 127.0.0.1 at 2011-06-12 13:36:28 -0700
+  Processing by ChallengesController#my_challenges as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'eab767911c833b652a8192ca1c1fac78af1ce5b36d08bd7ebe735c88e3e434bb8a8a3aed4f6448ca6a6c899d54a3c966934b2ef06814c1314a05d30be4914e90' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'eab767911c833b652a8192ca1c1fac78af1ce5b36d08bd7ebe735c88e3e434bb8a8a3aed4f6448ca6a6c899d54a3c966934b2ef06814c1314a05d30be4914e90' LIMIT 1
+  [1m[36mChallenge Load (0.3ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_to_id" = 11 ORDER BY created_at DESC[0m
+Rendered challenges/my_challenges.html.erb within layouts/application (98.8ms)
+Completed 200 OK in 103ms (Views: 102.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2011-06-12 13:36:35 -0700
+  Processing by ChallengesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'eab767911c833b652a8192ca1c1fac78af1ce5b36d08bd7ebe735c88e3e434bb8a8a3aed4f6448ca6a6c899d54a3c966934b2ef06814c1314a05d30be4914e90' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+Rendered challenges/_form.html.erb (89.4ms)
+Rendered challenges/new.html.erb within layouts/application (94.0ms)
+Completed 200 OK in 109ms (Views: 97.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at 2011-06-12 13:37:23 -0700
+  Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "challenge"=>{"user_from_id"=>"11", "user_to_id"=>"11", "challenge_txt"=>"Test me!"}, "commit"=>"Create Challenge"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'eab767911c833b652a8192ca1c1fac78af1ce5b36d08bd7ebe735c88e3e434bb8a8a3aed4f6448ca6a6c899d54a3c966934b2ef06814c1314a05d30be4914e90' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "challenges" ("user_from_id", "user_to_id", "challenge_txt", "challenge_tm", "send_dt", "accepted", "accepted_dt", "due_dt", "complete_dt", "created_at", "updated_at") VALUES (11, 11, 'Test me!', NULL, NULL, NULL, NULL, NULL, NULL, '2011-06-12 20:37:23.933281', '2011-06-12 20:37:23.933281')[0m
+  [1m[35mChallenge Load (2.6ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_from_id" = 11 ORDER BY created_at DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+Rendered challenges/sent_challenges.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 121ms (Views: 14.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/challenges/list/my_challenges" for 127.0.0.1 at 2011-06-12 13:37:28 -0700
+  Processing by ChallengesController#my_challenges as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'eab767911c833b652a8192ca1c1fac78af1ce5b36d08bd7ebe735c88e3e434bb8a8a3aed4f6448ca6a6c899d54a3c966934b2ef06814c1314a05d30be4914e90' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mChallenge Load (1.2ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_to_id" = 11 ORDER BY created_at DESC[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+Rendered challenges/my_challenges.html.erb within layouts/application (113.1ms)
+Completed 200 OK in 118ms (Views: 115.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/challenges/list/my_challenges" for 127.0.0.1 at 2011-06-12 13:41:59 -0700
+  Processing by ChallengesController#my_challenges as HTML
+ERROR: compiling _app_views_challenges_my_challenges_html_erb___456968399818438418_2173325980__2974145820755212255 RAISED /Users/xeniah/xendev/SW/WellB2B/app/views/challenges/my_challenges.html.erb:48: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/xeniah/xendev/SW/WellB2B/app/views/challenges/my_challenges.html.erb:50: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_challenges_my_challenges_html_erb___456968399818438418_2173325980__2974145820755212255(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "challenges/my_challenges";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new; title "My Challenges" 
+  @challenges = Challenge.find_all_by_user_to_id(current_user.id, :order => 'created_at DESC') 
+@output_buffer.safe_concat('
+<table>
+  <tr>
+    <th>From</th>
+    <th>Description</th>
+    <th>Completed On</th>
+	<th>Accepted Date</th>
+    <!-- <th>Send Date</th>       
+       <th>Due Date</th>
+       <th>Complete Date</th> -->
+  </tr>
+');   for challenge in @challenges 
+@output_buffer.safe_concat('    <tr>
+      <td><div style="color:green; font-style:italics;">
+');			 if User.exists?(challenge.user_from_id)	
+			 user_from = User.find(challenge.user_from_id)
+
+@output_buffer.safe_concat('		    	');@output_buffer.append= ( user_from.username );@output_buffer.safe_concat('
+');		  	 end
+@output_buffer.safe_concat('		  </div>
+	  </td>
+      <td>');@output_buffer.append= ( challenge.challenge_txt );@output_buffer.safe_concat('</td>
+
+	  <td>
+');		 if challenge.accepted == 1 
+@output_buffer.safe_concat('			<span style="color:orange; font-weight:bold">ACCEPTED!</span>
+');		else if challenge.accepted == 0
+@output_buffer.safe_concat('			<span style="color:red; ">Rejected ...<span style="color:red; font-weght:bold; "> Slacker!</span></span>
+');		 else 
+@output_buffer.safe_concat('			
+');		 end 
+@output_buffer.safe_concat('		</td>
+      <!-- <td>');;@output_buffer.safe_concat('</td>
+            <td>');;@output_buffer.safe_concat('</td>
+            
+            <td>');;@output_buffer.safe_concat('</td> -->
+      <td>');@output_buffer.append= ( challenge.complete_dt );@output_buffer.safe_concat('</td>
+      <td>');;@output_buffer.safe_concat('</td>
+      <td>');;@output_buffer.safe_concat('</td>
+      <td>');;@output_buffer.safe_concat('</td>
+    </tr>
+');   end 
+@output_buffer.safe_concat('</table>
+
+<p>');@output_buffer.append= ( link_to "New Challenge", new_challenge_path );@output_buffer.safe_concat('</p>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:255:in `module_eval'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:255:in `compile'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:134:in `block in render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:54:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/template.rb:127:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_view/render/rendering.rb:26:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/Users/xeniah/xendev/SW/WellB2B/app/controllers/challenges_controller.rb:49:in `my_challenges'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:441:in `_run__1081159628840909489__process_action__3889010610198901371__callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/notifications.rb:52:in `instrument'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/base.rb:119:in `process'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_controller/metal.rb:178:in `block in action'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:96:in `optimized_each'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:12:in `cache'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/query_cache.rb:31:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activerecord-3.0.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/rack/logger.rb:13:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/activesupport-3.0.8/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/application.rb:168:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/application.rb:77:in `method_missing'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/railties-3.0.8/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/xeniah/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered challenges/my_challenges.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (/Users/xeniah/xendev/SW/WellB2B/app/views/challenges/my_challenges.html.erb:48: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/xeniah/xendev/SW/WellB2B/app/views/challenges/my_challenges.html.erb:50: syntax error, unexpected $end, expecting keyword_end):
+    45: </table>
+    46: 
+    47: <p><%= link_to "New Challenge", new_challenge_path %></p>
+  app/controllers/challenges_controller.rb:49:in `my_challenges'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/challenges/list/my_challenges" for 127.0.0.1 at 2011-06-12 13:42:27 -0700
+  Processing by ChallengesController#my_challenges as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'eab767911c833b652a8192ca1c1fac78af1ce5b36d08bd7ebe735c88e3e434bb8a8a3aed4f6448ca6a6c899d54a3c966934b2ef06814c1314a05d30be4914e90' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mChallenge Load (1.4ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_to_id" = 11 ORDER BY created_at DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+Rendered challenges/my_challenges.html.erb within layouts/application (153.1ms)
+Completed 200 OK in 158ms (Views: 155.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-06-12 13:43:07 -0700
+  Processing by UserSessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'eab767911c833b652a8192ca1c1fac78af1ce5b36d08bd7ebe735c88e3e434bb8a8a3aed4f6448ca6a6c899d54a3c966934b2ef06814c1314a05d30be4914e90' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+Redirected to http://localhost:3000/login
+Completed 302 Found in 71ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-06-12 13:43:07 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.3ms)
+Rendered user_sessions/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 34ms (Views: 12.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-06-12 13:43:09 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (15.8ms)
+Rendered users/new.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 106ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-06-12 13:43:36 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user"=>{"username"=>"test57", "email"=>"test16@rLabG.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('test16@rLabG.com')) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."username") = LOWER('test57')) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."persistence_token" = 'be86d1c11a4334a85f9d4b495e7e41eae03d029a4709ed6b0baa0401b95d30d89dfea6931f2a59e57979c76021a0bc7060f3a815fdbd31eebf0972dda57a91c2') LIMIT 1[0m
+Rendered users/_form.html.erb (9.5ms)
+Rendered users/new.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 109ms (Views: 26.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-06-12 13:43:48 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user"=>{"username"=>"test57", "email"=>"test16@rLabG.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('test16@rLabG.com')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."username") = LOWER('test57')) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE ("users"."persistence_token" = '0668483ded88b72a8c58a0877587e82a283b75c24da088aa368ede540c741887d53c1044a7b42b97ba2d178e6eb9e2cabb082f402048c6added1cefdf904b1d6') LIMIT 1
+  [1m[36mAREL (1.2ms)[0m  [1mINSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at") VALUES ('test57', 'test16@rLabG.com', '8c990524365e112f66d9429013e365ab7e272c562cbd6117234bdd4dda66bf3910da815ff2c2f80797f985a0eda02c11a14b151d251cb9c52302eedadb96423c', 'KT5sbUfgD7bVcQTeEyJV', '0668483ded88b72a8c58a0877587e82a283b75c24da088aa368ede540c741887d53c1044a7b42b97ba2d178e6eb9e2cabb082f402048c6added1cefdf904b1d6', '2011-06-12 20:43:48.364861', '2011-06-12 20:43:48.364861')[0m
+Redirected to http://localhost:3000/challenges/list/my_challenges
+Completed 302 Found in 96ms
+
+
+Started GET "/challenges/list/my_challenges" for 127.0.0.1 at 2011-06-12 13:43:48 -0700
+  Processing by ChallengesController#my_challenges as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '0668483ded88b72a8c58a0877587e82a283b75c24da088aa368ede540c741887d53c1044a7b42b97ba2d178e6eb9e2cabb082f402048c6added1cefdf904b1d6' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '0668483ded88b72a8c58a0877587e82a283b75c24da088aa368ede540c741887d53c1044a7b42b97ba2d178e6eb9e2cabb082f402048c6added1cefdf904b1d6' LIMIT 1[0m
+  [1m[35mChallenge Load (0.3ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_to_id" = 12 ORDER BY created_at DESC
+Rendered challenges/my_challenges.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 110ms (Views: 108.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-06-12 13:43:57 -0700
+  Processing by UserSessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '0668483ded88b72a8c58a0877587e82a283b75c24da088aa368ede540c741887d53c1044a7b42b97ba2d178e6eb9e2cabb082f402048c6added1cefdf904b1d6' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+Redirected to http://localhost:3000/login
+Completed 302 Found in 34ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-06-12 13:43:57 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.5ms)
+Rendered user_sessions/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 97ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challenges" for 127.0.0.1 at 2011-06-12 13:46:15 -0700
+  Processing by ChallengesController#index as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Completed 500 Internal Server Error in 73ms
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/challenges_controller.rb:6:in `index'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-06-12 13:47:29 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.1ms)
+Rendered user_sessions/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 36ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challenges" for 127.0.0.1 at 2011-06-12 13:47:40 -0700
+  Processing by ChallengesController#index as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Completed 500 Internal Server Error in 29ms
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/challenges_controller.rb:6:in `index'
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started GET "/CHALLENGES" for 127.0.0.1 at 2011-06-12 13:52:23 -0700
+
+ActionController::RoutingError (No route matches "/CHALLENGES"):
+  
+
+Rendered /Users/xeniah/.rvm/gems/ruby-1.9.2-p180@SW/gems/actionpack-3.0.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/challenges" for 127.0.0.1 at 2011-06-12 13:52:32 -0700
+  Processing by ChallengesController#index as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Completed 302 Found in 67ms
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2011-06-12 13:52:32 -0700
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.2ms)
+Rendered user_sessions/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 34ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-06-12 13:52:43 -0700
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user_session"=>{"username"=>"demo", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users".username LIKE 'demo') LIMIT 1[0m
+Redirected to http://localhost:3000/challenges/list/my_challenges
+Completed 302 Found in 33ms
+
+
+Started GET "/challenges/list/my_challenges" for 127.0.0.1 at 2011-06-12 13:52:43 -0700
+  Processing by ChallengesController#my_challenges as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mChallenge Load (43.5ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_to_id" = 3 ORDER BY created_at DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered challenges/my_challenges.html.erb within layouts/application (176.0ms)
+Completed 200 OK in 181ms (Views: 135.7ms | ActiveRecord: 44.4ms)
+
+
+Started GET "/challenges/" for 127.0.0.1 at 2011-06-12 13:52:49 -0700
+  Processing by ChallengesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered challenges/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 94ms (Views: 10.4ms | ActiveRecord: 0.3ms)
