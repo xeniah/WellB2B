@@ -1,0 +1,33 @@
+<% title "My Challenges" %>
+
+<table>
+  <tr>
+    <th>User From</th>
+    <th>User To</th>
+    <th>Challenge Txt</th>
+    <th>Challenge Tm</th>
+    <th>Send Dt</th>
+    <th>Accepted</th>
+    <th>Accepted Dt</th>
+    <th>Due Dt</th>
+    <th>Complete Dt</th>
+  </tr>
+  <% for challenge in @challenges %>
+    <tr>
+      <td><%= challenge.user_from_id %></td>
+      <td><%= challenge.user_to_id %></td>
+      <td><%= challenge.challenge_txt %></td>
+      <td><%= challenge.challenge_tm %></td>
+      <td><%= challenge.send_dt %></td>
+      <td><%= challenge.accepted %></td>
+      <td><%= challenge.accepted_dt %></td>
+      <td><%= challenge.due_dt %></td>
+      <td><%= challenge.complete_dt %></td>
+      <td><%= link_to "Show", challenge %></td>
+      <td><%= link_to "Edit", edit_challenge_path(challenge) %></td>
+      <td><%= link_to "Destroy", challenge, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Challenge", new_challenge_path %></p>

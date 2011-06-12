@@ -1,12 +1,17 @@
 <%= form_for @challenge do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :user_from_id %><br />
-    <%= f.text_field :user_from_id %>
+	<%= f.hidden_field(:user_from_id, :value => current_user.id) %>
+    <%#= f.label :user_from_id %><br />
+    <%#= f.text_field :user_from_id %>
   </p>
   <p>
-    <%= f.label :user_to_id %><br />
-    <%= f.text_field :user_to_id %>
+    <%#= f.label :user_to_id %><br />
+    <%#= f.text_field :user_to_id %>
+  </p>
+  <p>
+	<%= f.label :user_to_id %><br />
+	<%= f.collection_select :user_to_id, User.all, :id, :email %>;
   </p>
   <p>
     <%= f.label :challenge_txt %><br />
