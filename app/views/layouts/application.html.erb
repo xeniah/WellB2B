@@ -20,7 +20,7 @@
   </head>
   <body>
     <div id="container">
-      <img align="right" src="/images/B2BWellLogo.png" />
+      <img align="right" width="150" height="150" src="/images/B2BWellLogo.png"/>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
@@ -28,7 +28,7 @@
 		<% if request[:controller] == 'user_sessions' || 
 			(request[:controller] == 'users' && request[:action] == 'new')%>
 		<% else %>
-		    Hello <span> <%= " #{current_user.username}!"%></span><br/>
+		    Hello <span style="font-style:italic;color:red;"><%= " #{current_user.username}!"%></span><br/>
      	<div style="text-align:center">
     	    	<%= link_to "[New Challenge]\t", new_challenge_path %>
 		    <%= link_to "[My Challenges]\t",  '/challenges/list/my_challenges' %>

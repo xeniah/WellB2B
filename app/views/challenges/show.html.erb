@@ -49,7 +49,7 @@
 	<H2>I've done it!!! Hurray!</H2>	
 <% else %>
 	<% if @challenge.accepted == 1 %> 
-		<%if (Time.now - @challenge.updated_at) > 311 %>
+		<%if (Time.now - @challenge.updated_at) > 60 %>
 			<H4>LOSER!!! LOSER!!! Haaaa!</H4>
 		<% else %>
 			<%= form_for @challenge do |f| %>
