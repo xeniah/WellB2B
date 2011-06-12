@@ -500,3 +500,59 @@ Started GET "/users/new" for 127.0.0.1 at 2011-06-11 17:51:26 -0700
 Rendered users/_form.html.erb (13.0ms)
 Rendered users/new.html.erb within layouts/application (17.5ms)
 Completed 200 OK in 40ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-06-11 18:01:28 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (13.6ms)
+Rendered users/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 50ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-06-11 18:01:39 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user"=>{"username"=>"demo", "email"=>"demo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('demo@gmail.com')) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."username") = LOWER('demo')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."persistence_token" = 'b685a5d49a765c0f0d85623fae6f2e284002ebf4f0b63a513c7d576c0ef69ca6f502dd686a6ba1064598a9beecec460d7eae08ec7363edc36afec6e22a5cb273') LIMIT 1[0m
+Rendered users/_form.html.erb (6.7ms)
+Rendered users/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 137ms (Views: 15.1ms | ActiveRecord: 0.4ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/xeniah/xendev/SW/WellB2B/config/environment.rb:5)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-06-11 18:04:43 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (15.5ms)
+Rendered users/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 46ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-06-11 18:05:07 -0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (11.9ms)
+Rendered users/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 37ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-06-11 18:05:23 -0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KE3gsns55VRMxy02G54BJ+H9vO2ftAsfajBu4YRGYLI=", "user"=>{"username"=>"test", "email"=>"test@rmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('test@rmail.com')) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE (LOWER("users"."username") = LOWER('test')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."persistence_token" = '86f8cce996ff9606b1a831c090cb5f65d9ffa07b46ace5f4207c31820b55754371d5b445cb68ab42df29f5694572ae76b94501011eaf1fea7f6ccb78f4e343f6') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (1.6ms)[0m  [1mINSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at") VALUES ('test', 'test@rmail.com', '7f0fafcfe595d25ed305fe2a6ad8cd4c97e47d4d342de6aa2b8f6a18d1f0ea9236fb2bdf44d7e10aa1260aea3886e4416ad8c3b8e0387eef8d1180acf4332516', 'hSb2vbFrcNEbxtNV3ZV', '86f8cce996ff9606b1a831c090cb5f65d9ffa07b46ace5f4207c31820b55754371d5b445cb68ab42df29f5694572ae76b94501011eaf1fea7f6ccb78f4e343f6', '2011-06-12 01:05:23.587430', '2011-06-12 01:05:23.587430')[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 187ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-06-11 18:05:23 -0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 34ms (Views: 13.0ms | ActiveRecord: 0.2ms)
