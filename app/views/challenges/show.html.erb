@@ -1,5 +1,8 @@
 <% title "Challenge Details" %>
-
+<link type="text/css" rel="stylesheet" href="ex.css?3.2"/>
+ <%= javascript_include_tag "protovis-d3.2.js" %>
+ <script type="text/javascript+protovis">
+ </script>
 <p>
   <strong>From:</strong>
   <% user_from = User.find(@challenge.user_from_id)%>

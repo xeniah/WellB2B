@@ -37,7 +37,7 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.find(params[:id])
     
     if @challenge.update_attributes(params[:challenge])
-      redirect_to @challenge, :notice  => "Successfully updated challenge."
+      redirect_to @challenge
     else
       render :action => 'edit'
     end
